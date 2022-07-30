@@ -21,7 +21,7 @@ contract EquistartFactory {
     }
 
     // projectMeta[] public deployedProjects;
-    mapping(uint => projectMeta) private deployedProjects;
+    mapping(uint => projectMeta) public deployedProjects;
     
     function createProject(string memory name, string memory symbol, uint initialSupply) public {
         uint projectId = numOfProjects++;
